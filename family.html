@@ -1,0 +1,307 @@
+<html>
+<head>
+<title> FAMILY & FRIENDS </title>
+
+<style>
+
+body{
+    background-color:pink;
+    font-size:17px;
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* ---------- HEADER ---------- */
+header{
+    background-color:#778899;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav{
+    background-color:#F08080;
+   	text-align:center;
+   	padding:10px 0;
+   	display: flex;
+   	justify-content: center;
+   	align-items: center;
+      	position: relative;
+}
+
+nav a{
+    text-decoration:none;
+    padding: 12px 20px;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background-color:#ffffff90;
+    color:#333;
+}
+
+/* Live clock on right */
+#live-clock {
+    position: absolute;
+    right: 20px;
+    color: white;
+    font-weight: 600;
+    font-size:16px;
+}
+
+/* ---------- MAIN SECTION ---------- */
+section{
+    width: 85%;
+    margin: auto;
+    padding:25px 0 40px 0;
+    text-align:center;
+    line-height:1.6;
+}
+
+/* ---------- HEADINGS ---------- */
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    color:#C71585;
+    margin-top:50px;
+    margin-bottom:10px;
+    position:relative;
+    display:inline-block;
+}
+
+.section-title::after{
+    content:"";
+    width:50%;
+    height:3px;
+    background:#C71585;
+    position:absolute;
+    left:25%;
+    bottom:-8px;
+    border-radius:10px;
+}
+
+/* ---------- MAIN FAMILY PHOTO ---------- */
+.big-family-photo{
+    width:35%;
+    border-radius:15px;
+    border:4px solid #F08080;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.15);
+    display:block;
+    margin:25px auto;
+    transition:0.4s ease;
+}
+
+.big-family-photo:hover{
+    transform:scale(1.03);
+    box-shadow:0px 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ---------- FAMILY PARAGRAPH ---------- */
+.family-text{
+    width:75%;
+    margin:auto;
+    margin-top:15px;
+    font-size:18px;
+    color:#444;
+}
+
+/* ---------- UNIFORM CARD DESIGN ---------- */
+.card{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    width:260px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+    border:3px solid #F08080;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+/* ---------- PARENTS SECTION ---------- */
+.parents-row{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* ---------- SIBLINGS SECTION (4 CARDS IN ONE ROW) ---------- */
+.siblings-row{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:20px;
+    flex-wrap:nowrap; /* force one row */
+}
+
+.siblings-row .card{
+    width:220px; /* smaller so 4 fit in one row */
+}
+
+/* ---------- FRIENDS ---------- */
+.friend-gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:25px;
+}
+
+.friend-gallery img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    border:3px solid #778899;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+}
+
+.friend-gallery img:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background-color:#F08080;
+    color:white;
+    text-align:center;
+    padding:8px;
+    margin-top:40px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Family & Friends</h1>
+</header>
+
+<nav>
+    <a href="index.html"> Home </a>
+    <a href="aboutme.html"> About Me </a>
+    <a href="Education.html"> Education </a>
+    <a href="family.html"> Family & Friends </a>
+    <a href="professional.html"> Professional Profile </a>
+    <div id="live-clock"></div>
+</nav>
+
+<section>
+
+    <!-- MAIN FAMILY PHOTO -->
+    <img src="familyphoto.jpeg" class="big-family-photo">
+
+    <p class="family-text">
+        This is my family of seven. Growing up as the eldest of five siblings has shaped who I am today. They are my comfort, my biggest source of strength and my daily source of joy — and I'm grateful for them always.
+    </p>
+
+    <!-- PARENTS -->
+    <h2 class="section-title">My Parents</h2><br><br>
+
+    <div class="parents-row">
+
+        <div class="card">
+            <img src="daddy5.jpg">
+            <h3>Mohd Omar Erwani</h3>
+            <p>Born on 26<sup>th</sup> November 1977, he's an <b style= "color: #F08080;">Executive Officer</b> at LHDN. He inspires me to do my best.</p>
+        </div>
+
+        <div class="card">
+            <img src="umi3.jpg">
+            <h3>Nurul Farhana</h3>
+            <p>Born on 11<sup>th</sup> April 1982, she's a <b style= "color: #F08080;">physiotherapist</b> at KPJ Damansara 2. She is the heart of our home.</p>
+        </div>
+
+    </div>
+
+    <!-- SIBLINGS -->
+    <h2 class="section-title">My Siblings</h2>
+
+    <div class="siblings-row">
+        <div class="card">
+            <img src="angah1.jpg">
+            <h3>#2 Kyraa Maisara</h3>
+        </div>
+
+        <div class="card">
+            <img src="fiyaa1.jpg">
+            <h3>#3 Wafiyaa Zahraa</h3>
+        </div>
+
+        <div class="card">
+            <img src="razin3.jpg">
+            <h3>#4 Raees Razin</h3>
+        </div>
+
+        <div class="card">
+            <img src="meera1.jpg">
+            <h3>#5 Erina Elmeera</h3>
+        </div>
+    </div>
+
+    <!-- FRIENDS -->
+    <h2 class="section-title">My Friends</h2>
+    <p style="width:70%; margin:auto; color:#444;">
+        Here are some of the people who make my days brighter — my closest friends who support, encourage, and grow with me.
+    </p>
+
+    <div class="friend-gallery">
+        <img src="friendsbrp1.jpg">
+        <img src="friendsbrp2.jpg">
+        <img src="friendsdiploma1.jpg">
+        <img src="friendsbrp3.jpg">
+        <img src="friendsbrp4.jpg">
+        <img src="friendsdiploma2.jpg">
+    </div>
+
+</section>
+
+<footer>
+    © This website is developed for IMD318 Individual Assignment.
+</footer>
+
+<!-- ---------- LIVE CLOCK SCRIPT ---------- -->
+<script>
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0"+hours : hours;
+    minutes = minutes < 10 ? "0"+minutes : minutes;
+    seconds = seconds < 10 ? "0"+seconds : seconds;
+
+    clock.textContent = hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

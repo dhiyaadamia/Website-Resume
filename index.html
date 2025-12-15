@@ -1,0 +1,70 @@
+<html>
+<head>
+
+<title> HOME </title>
+<link rel= "stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="main-body">
+
+<audio class= "home-audio" controls autoplay loop>
+<source src = "homepage song.mp3" type= "audio/mpeg">
+</audio> <br>
+
+
+<header> <h1> Dhiyaa Damia's Resume </h1> </header>
+
+<nav>
+	<a href= "index.html"> Home </a>
+	<a href= "aboutme.html"> About Me </a>
+	<a href= "Education.html"> Education </a>
+	<a href= "family.html"> Family & Friends </a>
+	<a href= "professional.html"> Professional Profile </a>
+</nav>
+
+<marquee class="home-marquee" behavior="scroll" direction="left"> Feel Free to Explore My Resume! </marquee>
+
+<section> 
+	<h1> Welcome to My Little Corner of the Internet! </h1>
+
+	<p class="home-intro">
+I'm <b> Dhiyaa Damia</b>, an <i> Information Management </i> student with interests in data handling, recordkeeping and Information Systems. <br><br>
+
+Here, you can discover more about 
+<b class="highlight-text">my personal background</b>
+<b class="highlight-text">academic achievements</b>,
+<b class="highlight-text">the people who support me </b> and 
+<b class="highlight-text">my professional skills and experiences. </b> <br><br>
+
+I'm eager to gain hands-on experience and broaden my knowledge where I can develop practical skills, contribute to my own professional growth and strengthen my work ethic. <br><br>
+
+Navigate through the pages to get to know me better :) <p>
+
+</section>
+
+<footer> © This website is developed for IMD318 Individual Assignment.</footer>
+
+<!-- ---------- LIVE CLOCK SCRIPT ---------- -->
+<script>
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0"+hours : hours;
+    minutes = minutes < 10 ? "0"+minutes : minutes;
+    seconds = seconds < 10 ? "0"+seconds : seconds;
+
+    clock.textContent = hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+
+</body>
+</html>

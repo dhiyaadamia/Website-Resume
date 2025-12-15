@@ -1,0 +1,362 @@
+<html>
+<head>
+<title> PROFESSIONAL PROFILE </title>
+
+<style>
+body{
+    background-color:pink;
+    font-size:17px;
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background-color:#778899;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    background-color:#F08080;
+    text-align:center;
+    padding:10px 0;
+    position:relative; /* needed for clock positioning */
+}
+
+nav a{
+    text-decoration:none;
+    padding: 12px 20px;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background-color:#ffffff90;
+    color:#333;
+}
+
+/* live clock style */
+#live-clock {
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    font-weight:600;
+    font-size:16px;
+}
+
+section{
+    width:85%;
+    margin:auto;
+    padding:30px 0 50px 0;
+    line-height:1.6;
+}
+
+/* ---------- HEADINGS WITH HOVER ANIMATION ---------- */
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    color:#C71585;
+    margin-bottom:10px;
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.section-title::after{
+    content:"";
+    width:0%;
+    height:3px;
+    background:#C71585;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.section-title:hover::after{
+    width:100%;
+}
+
+.skill-box, .exp-box{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    border:3px solid #F08080;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.exp-box{
+    border:3px solid #778899;
+    border:3px solid #F08080;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.skill-box:hover, .exp-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+.custom-marker li{
+    list-style-type:"✦ ";
+    padding-left:5px;
+}
+
+ol{
+    margin-left:20px;
+}
+
+.skill-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.skill-row p{
+    margin:0;
+}
+
+/* rating bar */
+.rating-bar{
+    width:45%;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-right:15px;
+}
+
+.rating-fill{
+    height:100%;
+    background:#778899;
+}
+
+/* ---------- SOFT SKILLS STARS ---------- */
+.star{
+    color:#C71585;
+    font-size:18px;
+    margin-left:30px;
+}
+
+/* ---------- LANGUAGE RATINGS */
+.language-list .lang-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:5px;
+}
+
+.lang-bar{
+    width:45%;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.lang-bar .rating-fill{
+    height:100%;
+    background:#778899;
+    border-radius:20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background-color:#F08080;
+    color:white;
+    text-align:center;
+    padding:8px;
+    margin-top:40px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header id="top">
+    <h1 class="hover-underline"> Professional Profile </h1>
+</header>
+
+<nav>
+    <a href="index.html"> Home </a>
+    <a href="aboutme.html"> About Me </a>
+    <a href="Education.html"> Education </a>
+    <a href="family.html"> Family & Friends </a>
+    <a href="professional.html"> Professional Profile </a>
+    <div id="live-clock"></div>
+</nav>
+
+<section>
+
+<!-- LINK TO WORK EXPERIENCE -->
+<p><a href="#work-experience" style="color:#C71585; text-decoration:underline;">Go to Work Experience</a></p>
+
+<!-- SKILLS SECTION -->
+<h2 class="section-title">My Skills</h2><br><br>
+
+<!-- TECHNICAL SKILLS -->
+<div class="skill-box">
+    <h3 style="color:#C71585;">1. Technical Skills</h3>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Data Entry & Recordkeeping — fast, accurate and detail-oriented</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:90%;background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Data Management & Filing Systems</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:85%; background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> MS Office (Word, PowerPoint, Excel – intermediate)</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:80%; background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Canva & basic graphic design tools</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:90%; background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Information Retrieval Systems</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:75%; background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Email & Phone Etiquette</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:95%; background: #C71585;"></div></div>
+    </div>
+
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Basic HTML / CSS understanding</p>
+        <div class="rating-bar"><div class="rating-fill" style="width:70%; background: #C71585;"></div></div>
+    </div>
+</div>
+
+<!-- SOFT SKILLS -->
+<div class="skill-box">
+    <h3 style="color:#C71585;">2. Soft Skills</h3>
+
+    <ul class="custom-marker">
+        <li>Teamwork: Strong collaboration skills in group-based academic projects. <span class="star">★★★★☆</span></li>
+        <li>Time Management: Able to balance coursework, club involvement & part-time work. <span class="star">★★★★☆</span></li>
+        <li>
+            Communication: Clear, professional communication in English & Malay. <span class="star">★★★★★</span>
+            
+            <!-- Nested language ratings under Communication -->
+            <ul class="custom-marker language-list" style="margin-top:5px; margin-left:0; padding-left:20px;">
+                <li class="lang-row">
+                    <span>English — Fluent</span>
+                    <div class="rating-bar lang-bar">
+                        <div class="rating-fill" style="width:95%; background: #C71585;"></div>
+                    </div>
+                </li>
+                <li class="lang-row">
+                    <span>Malay — Fluent</span>
+                    <div class="rating-bar lang-bar">
+                        <div class="rating-fill" style="width:95%;background: #C71585;"></div>
+                    </div>
+                </li>
+            </ul>
+        </li><br>
+        <li>Adaptability: Flexible and fast learner when using new tools or systems. <span class="star">★★★★☆</span></li>
+    </ul>
+</div>
+
+<!-- WORK EXPERIENCE SECTION -->
+<h2 id="work-experience" class="section-title" style="margin-top:40px;">Work Experience</h2><br><br>
+
+<!-- NEW EXPERIENCE 1: JKR INTERNSHIP -->
+<div class="exp-box" style="position:relative;">
+    <h3 style="margin-bottom:5px;">1. Internship Trainee</h3>
+    <p style="margin:0;"><i>Jabatan Kerja Raya (JKR) Selangor | July 2025 – September 2025</i></p>
+    <video controls style="width:400px; height:220px; position:absolute; right:75px; top:75px;">
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br><br>
+    <ul class="custom-marker">
+        <li>Assisted staff with document management, filing and maintaining official documents</li>
+        <li>Prepared official documents and administrative materials</li>
+        <li>Helped distribute memos and incoming/outgoing correspondence</li>
+        <li>Developed a Google Form system to ease the internship application process</li>
+        <li>Managed full coordination of new intern briefing process</li>
+    </ul>
+</div>
+
+<!-- EXPERIENCE 2: SALES ASSISTANT -->
+<div class="exp-box" style="position:relative;">
+    <h3 style="margin-bottom:5px;">2. Sales Assistant (Part-Time)</h3>
+    <p style="margin:0;"><i>Jewelry Booth Stall | August 2024 – October 2024</i></p>
+    <div style="position:absolute; right:55px; top:50px; display:flex; gap:20px;">
+        <img src="parttime2.jpg" alt="Sales Image 1" style="width:265px; height:220px; object-fit:cover;">
+        <img src="parttime1.jpg" alt="Sales Image 2" style="width:265px; height:220px; object-fit:cover;">
+    </div>
+    <br><br>
+    <ul class="custom-marker">
+        <li>Assisted customers in selecting and purchasing jewelry products</li>
+        <li>Developed experience in sales, teamwork and time management</li>
+        <li>Handled cash and digital payment transactions accurately</li>
+    </ul>
+</div>
+
+<!-- EXPERIENCE 3: ACADEMIC PROJECTS -->
+<div class="exp-box" style="position:relative;">
+    <h3 style="margin-bottom:5px;">3. Academic & Project-Based Experience</h3>
+    <p style="margin:0;"><i>Diploma in Information Management, UiTM</i></p>
+    <div style="position:absolute; right:55px; top:50px; display:flex; gap:20px;">
+        <img src="staysphere.png" alt="Project Image 1" style="width:265px; height:220px; object-fit:cover;">
+        <img src="sweetsnowburst.png" alt="Project Image 2" style="width:275px; height:230px; object-fit:cover;">
+    </div>
+    <br><br>
+    <ul class="custom-marker">
+        <li>Designed a homestay reservation system called StaySphere (IMD261)</li>
+        <li>Led team tasks for Sweets Snowburst business proposal (ENT300)</li>
+        <li>Actively participated in Student Leadership Council (Selected Member)</li>
+        <li>Created multimedia content (photos, videos, editing, Canva posters)</li>
+    </ul>
+</div>
+
+<!-- GO TO TOP LINK -->
+<p style="text-align:right;"><a href="#top" style="color:#C71585; text-decoration:underline;">Go to Top</a></p>
+
+</section>
+
+<footer>
+    © This website is developed for IMD318 Individual Assignment.
+</footer>
+
+<script>
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0"+hours : hours;
+    minutes = minutes < 10 ? "0"+minutes : minutes;
+    seconds = seconds < 10 ? "0"+seconds : seconds;
+
+    clock.textContent = hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
