@@ -1,0 +1,148 @@
+<head>
+<title> EDUCATION </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="main-body">
+
+<header>
+  	<h1> My Education Timeline </h1>
+</header>
+
+<nav>
+  	<a href="index.html"> Home </a>
+  	<a href="aboutme.html"> About Me </a>
+  	<a href="education.html"> Education </a>
+  	<a href="family.html"> Family & Friends </a>
+  	<a href="professional.html"> Professional Profile </a>
+	<a href="gallery.html">Gallery</a>
+    <div id="live-clock"></div>
+</nav>
+
+<section class="education-section">
+
+  <div class="education-text">
+
+    <h2 class="animated-title">My Academic Journey</h2>
+
+    <ol class="education-list">
+      <li>
+        <h3 class="education-subtitle">Kindergarten</h3>
+        <div class="education-card">
+          <div class="school-box">
+            <img src="smart reader.png" class="school-logo">
+            <div><b>• Smart Reader Kids, Mont Kiara</b><br> (2010-2011)</div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <h3 class="education-subtitle">Primary Schools</h3>
+        <div class="education-card">
+          <div class="school-box">
+            <img src="sksh.jpeg" class="school-logo">
+            <div><b>• SK Seri Hartamas</b><br> (2012, 2015-2017)</div></div>
+    	<div class="school-box">
+            <img src="convent.jpeg" class="school-logo">
+            <div><b>• SK Convent</b><br> (2013-2014)</div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <h3 class="education-subtitle">Secondary Schools</h3>
+        <div class="education-card">
+          <div class="school-box">
+            <img src="smksh.jpeg" class="school-logo">
+            <div><b>• SMK Seri Hartamas</b><br> (2018-2020)</div>
+          </div>
+          <div class="school-box">
+            <img src="mrsm bentong.jpeg" class="school-logo">
+            <div><b>• MRSM Bentong</b><br> (March-April 2018)</div>
+          </div>
+          <div class="school-box">
+            <img src="smkbrp.jpeg" class="school-logo">
+            <div><b>• SMK Bukit Rahman Putra</b> (2021-2022)<br> Sains Ikhtisas (Physics, Chemistry, Account, Addmaths)</div>
+          </div>
+	</div>
+      </li>
+
+      <li>
+        <h3 class="education-subtitle">Diploma</h3>
+        <div class="education-card">
+          <div class="school-box">
+            <img src="uitm.png" class="school-logo">
+            <div><b>• UiTM Segamat, Johor</b> (2023-Present)<br> Diploma in <i>Information Management</i></div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+
+  <div class="education-right">
+
+    <h3 class="education-subtitle"><b>Primary School Achievements:</b> UPSR 4A, 2B</h3>
+    <table class="education-table">
+      <tr><th>Subject</th> <th>Grade</th></tr>
+      <tr><td>Bahasa Melayu (Pemahaman)</td> <td>A</td></tr>
+      <tr><td>Bahasa Melayu (Penulisan)</td> <td>A</td></tr>
+      <tr><td>Bahasa Inggeris (Pemahaman)</td> <td>A</td></tr>
+      <tr><td>Bahasa Inggeris (Penulisan)</td> <td>A</td></tr>
+      <tr><td>Matematik</td> <td>B</td></tr>
+      <tr><td>Sains</td> <td>B</td></tr>
+    </table>
+
+    <h3 class="education-subtitle"><b>Secondary School Achievements:</b> SPM 6A</h3>
+    <table class="education-table">
+      <tr><th>Subject</th> <th>Grade</th></tr>
+      <tr><td>Bahasa Melayu</td> <td>A</td></tr>
+      <tr><td>English</td> <td>A</td></tr>
+      <tr><td>Mathematics</td> <td>A</td></tr>
+      <tr><td>Pendidikan Islam</td> <td>A+</td></tr>
+      <tr><td>Sejarah</td> <td>A-</td></tr>
+      <tr><td>Prinsip Perakaunan</td> <td>A-</td></tr>
+      <tr><td>Physics</td> <td>C+</td></tr>
+      <tr><td>Chemistry</td> <td>C</td></tr>
+      <tr><td>Addmaths</td> <td>D</td></tr>
+    </table>
+
+    <h3 class="education-subtitle"><b>Diploma Achievements:</b> Dean's List</h3>
+    <table class="education-table">
+      <tr><th>Semester</th> <th>GPA</th> <th>Dean's List</th></tr>
+      <tr><td>Semester 1</td> <td>3.70</td> <td>Yes</td></tr>
+      <tr><td>Semester 2</td> <td>3.72</td> <td>Yes</td></tr>
+      <tr><td>Semester 3</td> <td>3.76</td> <td>Yes</td></tr>
+      <tr><td>Semester 4</td> <td>3.84</td> <td>Yes</td></tr>
+      <tr><td>Semester 5</td><td> </td><td> </td></tr>
+    </table>
+
+  </div>
+
+</section>
+
+<footer> © This website is developed for IMD318 Individual Assignment. </footer>
+
+<!-- ---------- LIVE CLOCK SCRIPT ---------- -->
+<script>
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0"+hours : hours;
+    minutes = minutes < 10 ? "0"+minutes : minutes;
+    seconds = seconds < 10 ? "0"+seconds : seconds;
+
+    clock.textContent = hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

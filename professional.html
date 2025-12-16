@@ -1,0 +1,476 @@
+<html>
+<head>
+<title> PROFESSIONAL PROFILE </title>
+
+<style>
+/* =========================
+   GLOBAL STYLES
+========================= */
+body{
+    background-color:pink;
+    font-size:17px;
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background-color:#778899;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    background-color:#F08080;
+    text-align:center;
+    padding:10px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+nav a{
+    text-decoration:none;
+    padding: 12px 20px;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background-color:#ffffff90;
+    color:#333;
+}
+
+#live-clock {
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    font-weight:600;
+    font-size:16px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section{
+    width:85%;
+    margin:auto;
+    padding:30px 0 50px 0;
+    line-height:1.6;
+}
+
+/* ---------- HEADINGS ---------- */
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    color:#C71585;
+    margin-bottom:20px;
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeSlide 0.8s forwards;
+}
+
+.section-title::after{
+    content:"";
+    width:0%;
+    height:3px;
+    background:#C71585;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.section-title:hover::after{
+    width:100%;
+}
+
+@keyframes fadeSlide{
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+.skill-box, .exp-box{
+    position:relative;
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    margin-bottom:25px;
+    transition:0.3s ease, transform 0.3s ease;
+    overflow:hidden;
+}
+
+/* Linear gradient on top */
+.skill-box::before, .exp-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background: linear-gradient(to right, #C71585, #F08080);
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
+}
+
+.skill-box:hover, .exp-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* ---------- TECHNICAL SKILLS ---------- */
+.skill-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.skill-row p{
+    margin:0;
+}
+
+.rating-bar{
+    width:45%;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-left:10px;
+    position:relative;
+}
+
+.rating-fill{
+    height:100%;
+    background:#778899;
+    width:0%; /* start empty for animation */
+    border-radius:20px;
+    transition:width 1s ease-in-out;
+}
+
+/* Tooltip on hover */
+.rating-fill:hover::after{
+    content: attr(data-percent);
+    position:absolute;
+    right:0;
+    top:-25px;
+    background:#C71585;
+    color:white;
+    padding:2px 6px;
+    font-size:12px;
+    border-radius:4px;
+    white-space:nowrap;
+}
+
+/* ---------- SOFT SKILLS STARS ---------- */
+.custom-marker li{
+    list-style-type:"✦ ";
+    padding-left:5px;
+    margin-bottom:8px;
+}
+
+.star{
+    color:#C71585;
+    font-size:18px;
+    margin-left:15px;
+}
+
+/* ---------- LANGUAGE RATINGS ---------- */
+.language-list .lang-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:5px;
+}
+
+.lang-bar{
+    width:45%;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+.lang-bar .rating-fill{
+    height:100%;
+    background:#778899;
+    border-radius:20px;
+    width:0%;
+    transition:width 1s ease-in-out;
+}
+
+.lang-bar .rating-fill:hover::after{
+    content: attr(data-percent);
+    position:absolute;
+    right:0;
+    top:-25px;
+    background:#C71585;
+    color:white;
+    padding:2px 6px;
+    font-size:12px;
+    border-radius:4px;
+}
+
+/* ---------- EXPERIENCE MEDIA ---------- */
+.exp-box .exp-media{
+    position:absolute;
+    right:20px;
+    top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.exp-box .exp-media img, .exp-box .exp-media video{
+    width:265px;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    cursor:pointer;
+    transition:0.3s ease, transform 0.3s ease;
+}
+
+.exp-box .exp-media img:hover, .exp-box .exp-media video:hover{
+    transform: scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ---------- DOWNLOAD CV BUTTON ---------- */
+#download-cv{
+    display:inline-block;
+    background:#C71585;
+    color:white;
+    padding:10px 18px;
+    margin-bottom:20px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+#download-cv:hover{
+    background:#F08080;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background-color:#F08080;
+    color:white;
+    text-align:center;
+    padding:8px;
+    margin-top:40px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="top">
+    <h1 class="hover-underline"> Professional Profile </h1>
+</header>
+
+<nav>
+    <a href="index.html"> Home </a>
+    <a href="aboutme.html"> About Me </a>
+    <a href="Education.html"> Education </a>
+    <a href="family.html"> Family & Friends </a>
+    <a href="professional.html"> Professional Profile </a>
+    <a href="gallery.html">Gallery</a>
+    <div id="live-clock"></div>
+</nav>
+
+<section>
+
+<!-- Download CV -->
+<a href="MyCV.pdf" id="download-cv" download>Download CV</a>
+
+<!-- LINK TO WORK EXPERIENCE -->
+<p><a href="#work-experience" style="color:#C71585; text-decoration:underline;">Go to Work Experience</a></p>
+
+<!-- SKILLS SECTION -->
+<h2 class="section-title">My Skills</h2>
+
+<div class="skill-box">
+    <h3>1. Technical Skills</h3>
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Data Entry & Recordkeeping</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="90%" style="background:#C71585;"></div></div>
+    </div>
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Data Management & Filing Systems</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="85%" style="background:#C71585;"></div></div>
+    </div>
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> MS Office</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="80%" style="background:#C71585;"></div></div>
+    </div>
+    <div class="skill-row">
+        <p><span class="custom-marker">✦</span> Canva & basic graphic design tools</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="90%" style="background:#C71585;"></div></div>
+    </div>
+<div class="skill-row">
+        <p><span class="custom-marker">✦</span> Email & Phone Ettique</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="95%" style="background:#C71585;"></div></div>
+    </div>
+<div class="skill-row">
+        <p><span class="custom-marker">✦</span> HTML / CSS Understanding</p>
+        <div class="rating-bar"><div class="rating-fill" data-percent="80%" style="background:#C71585;"></div></div>
+    </div>
+
+</div>
+
+<div class="skill-box">
+    <h3>2. Soft Skills</h3>
+    <ul class="custom-marker">
+        <li>Teamwork: Strong collaboration skills. <span class="star">★★★★☆</span></li>
+        <li>Time Management: Able to balance coursework & part-time work. <span class="star">★★★★☆</span></li>
+        <li>
+            Communication: Clear communication in English & Malay. <span class="star">★★★★★</span>
+            <ul class="custom-marker language-list">
+                <li class="lang-row">
+                    <span>English — Fluent</span>
+                    <div class="lang-bar"><div class="rating-fill" data-percent="95%" style="background:#C71585;"></div></div>
+                </li>
+                <li class="lang-row">
+                    <span>Malay — Fluent</span>
+                    <div class="lang-bar"><div class="rating-fill" data-percent="95%" style="background:#C71585;"></div></div>
+                </li>
+            </ul>
+        </li>
+        <li>Adaptability: Flexible and fast learner. <span class="star">★★★★☆</span></li>
+    </ul>
+</div>
+
+<h2 id="work-experience" class="section-title">Work Experience</h2>
+
+<!-- EXPERIENCE 1 -->
+<div class="exp-box">
+    <h3>1. Internship Trainee</h3>
+    <p><i>Jabatan Kerja Raya (JKR) Selangor | July 2025 – September 2025</i></p>
+    <div class="exp-media">
+        <video controls style="width:400px; height:220px; position:absolute; right:100px; top:70px;">
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <ul class="custom-marker">
+        <li>Assisted staff with document management</li>
+        <li>Prepared official documents</li>
+        <li>Helped distribute memos & correspondence</li>
+        <li>Developed Google Form system for internship</li>
+        <li>Managed intern briefing process</li>
+    </ul>
+</div>
+
+<!-- EXPERIENCE 2 -->
+<div class="exp-box">
+    <h3>2. Sales Assistant (Part-Time)</h3>
+    <p><i>Jewelry Booth Stall | August 2024 – October 2024</i></p>
+    <div class="exp-media">
+        <img src="parttime2.jpg" alt="Sales Image 1">
+        <img src="parttime1.jpg" alt="Sales Image 2">
+    </div>
+    <ul class="custom-marker">
+        <li>Assisted customers in selecting & purchasing products</li>
+        <li>Developed experience in sales & teamwork</li>
+        <li>Handled cash & digital payments accurately</li>
+    </ul>
+</div>
+
+<!-- EXPERIENCE 3 -->
+<div class="exp-box">
+    <h3>3. Academic & Project-Based Experience</h3>
+    <p><i>Diploma in Information Management, UiTM</i></p>
+    <div class="exp-media">
+        <img src="staysphere.png" alt="Project Image 1">
+        <img src="sweetsnowburst.png" alt="Project Image 2">
+    </div>
+    <ul class="custom-marker">
+        <li>Designed StaySphere homestay system (IMD261)</li>
+        <li>Led Sweet Snowburst business proposal (ENT300)</li>
+        <li>Participated in Student Leadership Council</li>
+        <li>Created multimedia content (photos, videos, Canva posters)</li>
+    </ul>
+</div>
+
+<p style="text-align:right;"><a href="#top" style="color:#C71585; text-decoration:underline;">Go to Top</a></p>
+
+</section>
+
+<footer>
+    © This website is developed for IMD318 Individual Assignment.
+</footer>
+
+<script>
+/* Animate rating bars on scroll */
+function animateBars() {
+    const bars = document.querySelectorAll('.rating-fill');
+    bars.forEach(bar=>{
+        const rect = bar.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50 && !bar.dataset.animated){
+            bar.style.width = bar.getAttribute('data-percent');
+            bar.dataset.animated = true; // prevent repeat animation
+        }
+    });
+}
+window.addEventListener('scroll',animateBars);
+window.addEventListener('load',animateBars);
+
+/* Tooltip showing % on hover */
+document.querySelectorAll('.rating-fill').forEach(bar => {
+    const tooltip = document.createElement('span');
+    tooltip.style.position = 'absolute';
+    tooltip.style.top = '-25px';
+    tooltip.style.right = '0';
+    tooltip.style.background = '#C71585';
+    tooltip.style.color = 'white';
+    tooltip.style.padding = '2px 6px';
+    tooltip.style.fontSize = '12px';
+    tooltip.style.borderRadius = '4px';
+    tooltip.style.whiteSpace = 'nowrap';
+    tooltip.style.opacity = '0';
+    tooltip.style.transition = '0.3s';
+    tooltip.textContent = bar.getAttribute('data-percent');
+    bar.style.position = 'relative';
+    bar.appendChild(tooltip);
+
+    bar.addEventListener('mouseenter', ()=>tooltip.style.opacity='1');
+    bar.addEventListener('mouseleave', ()=>tooltip.style.opacity='0');
+});
+
+/* Live Clock */
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+    let h = now.getHours().toString().padStart(2,'0');
+    let m = now.getMinutes().toString().padStart(2,'0');
+    let s = now.getSeconds().toString().padStart(2,'0');
+    clock.textContent = h+":"+m+":"+s;
+}
+setInterval(updateClock,1000);
+updateClock();
+
+</script>
+
+</body>
+</html>

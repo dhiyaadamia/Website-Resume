@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GALLERY</title>
+
+    <style>
+    /* =========================
+       GLOBAL STYLES (same as other pages)
+    ========================== */
+    body{
+        background-color:pink;
+        font-size:17px;
+        font-family: 'Segoe UI', sans-serif;
+        margin:0;
+        padding:0;
+    }
+
+    header{
+        background-color:#778899;
+        color:white;
+        text-align:center;
+        padding:25px;
+    }
+
+    nav{
+        background-color:#F08080;
+        text-align:center;
+        padding:10px 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:relative;
+    }
+
+    nav a{
+        text-decoration:none;
+        padding: 12px 20px;
+        color:white;
+        font-weight:600;
+        font-size:16px;
+        border-radius:6px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        background-color:#ffffff90;
+        color:#333;
+    }
+
+    #live-clock {
+        position:absolute;
+        right:20px;
+        color:white;
+        font-weight:600;
+        font-size:16px;
+    }
+
+    section{
+        width:85%;
+        margin:auto;
+        padding:30px 0 50px 0;
+        text-align:center;
+    }
+
+    .section-title{
+        font-size:28px;
+        font-weight:700;
+        color:#C71585;
+        margin-bottom:20px;
+        position:relative;
+        display:inline-block;
+    }
+
+    .section-title::after{
+        content:"";
+        width:50%;
+        height:3px;
+        background:#C71585;
+        position:absolute;
+        left:25%;
+        bottom:-8px;
+        border-radius:10px;
+    }
+
+    footer{
+        background-color:#F08080;
+        color:white;
+        text-align:center;
+        padding:8px;
+        margin-top:40px;
+        font-size:14px;
+    }
+
+    /* =========================
+       ⭐ NEW ADDITION 1: QUOTE STRIP
+    ========================== */
+    .quote-strip{
+        background:linear-gradient(to right, #C71585, #F08080);
+        color:white;
+        padding:10px 0;
+        font-style:italic;
+        font-size:16px;
+        overflow:hidden;
+    }
+
+    .quote-track{
+        display:inline-block;
+        white-space:nowrap;
+        animation:scrollQuote 18s linear infinite;
+    }
+
+    @keyframes scrollQuote{
+        from{ transform:translateX(100%); }
+        to{ transform:translateX(-100%); }
+    }
+
+    /* =========================
+       GALLERY GRID
+    ========================== */
+    .gallery-row{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        margin-bottom:25px;
+        flex-wrap:wrap;
+    }
+
+    /* =========================
+       ⭐ NEW ADDITION 2: PREMIUM CARD + GRADIENT BORDER
+    ========================== */
+    .gallery-card{
+        position:relative;
+        width:180px;
+        height:180px;
+        border-radius:14px;
+        overflow:hidden;
+
+        border:3px solid transparent;
+        background-image:
+            linear-gradient(white, white),
+            linear-gradient(to right, #C71585, #F08080);
+        background-origin:border-box;
+        background-clip:padding-box, border-box;
+
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        transition:0.4s ease;
+        animation:cardFade 0.8s ease forwards;
+    }
+
+    /* =========================
+       ⭐ NEW ADDITION 3: ENTRANCE ANIMATION
+    ========================== */
+    @keyframes cardFade{
+        from{ opacity:0; transform:translateY(20px); }
+        to{ opacity:1; transform:translateY(0); }
+    }
+
+    .gallery-card img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /* =========================
+       ⭐ NEW ADDITION 4: HOVER OVERLAY (CAPTION)
+    ========================== */
+    .gallery-overlay{
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.55);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-size:15px;
+        opacity:0;
+        transition:0.3s;
+        text-align:center;
+        padding:10px;
+    }
+
+    .gallery-card:hover .gallery-overlay{
+        opacity:1;
+    }
+
+    /* =========================
+       ⭐ NEW ADDITION 5: ADVANCED HOVER EFFECT
+    ========================== */
+    .gallery-card:hover{
+        transform:scale(1.08) rotate(-2deg);
+        box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Moments I Treasure</h1>
+</header>
+
+<nav>
+    <a href="index.html"> Home </a>
+    <a href="aboutme.html"> About Me </a>
+    <a href="Education.html"> Education </a>
+    <a href="family.html"> Family & Friends </a>
+    <a href="professional.html"> Professional Profile </a>
+    <a href="gallery.html"> Gallery </a>
+    <div id="live-clock"></div>
+</nav>
+
+<!-- ⭐ NEW ADDITION 1: QUOTE STRIP -->
+<div class="quote-strip">
+    <div class="quote-track">
+        “Moments fade, memories stay forever.” ✦
+        “Every picture tells a story.” ✦
+        “Little moments, big meanings.” ✦
+        “Captured memories from my journey.”
+    </div>
+</div>
+
+<section>
+    <h2 class="section-title">My Gallery</h2>
+
+    <!-- ROW 1 -->
+    <div class="gallery-row">
+        <div class="gallery-card">
+            <img src="gallery1.jpg">
+            <div class="gallery-overlay">Family Moments</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery8.jpg">
+            <div class="gallery-overlay">Campus Life</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery6.jpg">
+            <div class="gallery-overlay">Friends</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery28.jpg">
+            <div class="gallery-overlay">Special Day</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery26.jpg">
+            <div class="gallery-overlay">Memories</div>
+        </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="gallery-row">
+        <div class="gallery-card">
+            <img src="gallery11.jpg">
+            <div class="gallery-overlay">Diploma Life</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery14.jpg">
+            <div class="gallery-overlay">Friendship</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery3.jpg">
+            <div class="gallery-overlay">Moments</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery27.jpg">
+            <div class="gallery-overlay">Campus Days</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery7.jpg">
+            <div class="gallery-overlay">Snapshots</div>
+        </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="gallery-row">
+        <div class="gallery-card">
+            <img src="gallery19.jpg">
+            <div class="gallery-overlay">Life Moments</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery12.jpg">
+            <div class="gallery-overlay">Good Times</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery15.jpg">
+            <div class="gallery-overlay">Friends</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery17.jpg">
+            <div class="gallery-overlay">Captured</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery30.jpg">
+            <div class="gallery-overlay">Journey</div>
+        </div>
+    </div>
+
+    <!-- ROW 4 -->
+    <div class="gallery-row">
+        <div class="gallery-card">
+            <img src="gallery23.jpg">
+            <div class="gallery-overlay">Memories</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery20.jpg">
+            <div class="gallery-overlay">Moments</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery5.jpg">
+            <div class="gallery-overlay">Smiles</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery10.jpg">
+            <div class="gallery-overlay">Snapshots</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery16.jpg">
+            <div class="gallery-overlay">Life</div>
+        </div>
+    </div>
+
+    <!-- ROW 5 -->
+    <div class="gallery-row">
+        <div class="gallery-card">
+            <img src="gallery29.jpg">
+            <div class="gallery-overlay">Journey</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery22.jpg">
+            <div class="gallery-overlay">Together</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery4.jpg">
+            <div class="gallery-overlay">Moments</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery21.jpg">
+            <div class="gallery-overlay">Memories</div>
+        </div>
+        <div class="gallery-card">
+            <img src="gallery25.jpg">
+            <div class="gallery-overlay">Captured</div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © This website is developed for IMD318 Individual Assignment.
+</footer>
+
+<script>
+function updateClock() {
+    const clock = document.getElementById('live-clock');
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? "0"+hours : hours;
+    minutes = minutes < 10 ? "0"+minutes : minutes;
+    seconds = seconds < 10 ? "0"+seconds : seconds;
+
+    clock.textContent = hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
